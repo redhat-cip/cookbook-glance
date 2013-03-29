@@ -89,7 +89,7 @@ when "fedora", "redhat", "centos" # :pragma-foodcritic: ~FC024 - won't fix this
     "glance_api_process_name" => "glance-api",                      # node_attribute
     "package_overrides" => ""                                       # node_attribute
   }
-when "ubuntu"
+when "ubuntu", "debian"
   default["glance"]["platform"] = {
     "mysql_python_packages" => [ "python-mysqldb" ],                # node_attribute
     "glance_packages" => [ "glance", "python-swift" ],              # node_attribute
